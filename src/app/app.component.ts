@@ -10,7 +10,6 @@ export class AppComponent implements OnInit {
   matrix: any[] = [];
   activePalyer = "O";
   isGameOver = false;
-  isTie = false;
   counter = 0;
 
 

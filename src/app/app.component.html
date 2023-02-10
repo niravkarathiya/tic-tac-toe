@@ -9,7 +9,7 @@
 
     </div>
     <div class="board">
-        <table disable="isGameOver">
+        <table>
             <tbody>
                 <tr *ngFor="let column of matrix;let i = index;" [ngClass]="isGameOver ? 'noClick':''">
                     <td *ngFor="let cell of column;let j=index;" (click)="changePlayer(matrix[i][j])"
