@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <span class="banner-title">Tic Tac Toe</span>
+    </div>
+    <div class="inner-banner-title" *ngIf="!isGameOver && counter !== 9">
+        {{activePalyer}}'s turn
+    </div>
+    <div>
+
+    </div>
+    <div class="board">
+        <table disable="isGameOver">
+            <tbody>
+                <tr *ngFor="let column of matrix;let i = index;" [ngClass]="isGameOver ? 'noClick':''">
+                    <td *ngFor="let cell of column;let j=index;" (click)="changePlayer(matrix[i][j])"
+                        [ngClass]="cell.player ? 'noClick':''">
+                        {{cell.player}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="banner-title" *ngIf="isGameOver">
+            <span class="banner-title">{{activePalyer}} won the game</span>
+        </div>
+        <div class="banner-title" *ngIf="counter === 9 && !isGameOver">
+            <span class="banner-title">Match Tie!</span>
+        </div>
+        <div>
+            <button (click)="restartGame()" class="btn-restart">Restart</button>
+        </div>
+    </div>
+</div>

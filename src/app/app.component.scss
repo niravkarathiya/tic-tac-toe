@@ -1,0 +1,53 @@
+.container {
+    text-align: center;
+    box-shadow: 5px 5px 5px gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.banner-title {
+    font-size: xx-large;
+    color: #dca02d;
+}
+
+.inner-banner-title {
+    font-size: large;
+    color: rgb(180 149 47);
+}
+
+.board {
+    text-align: center;
+    flex: 0 0 35%;
+}
+
+table {
+    margin: 10px auto 5px auto;
+    cursor: pointer;
+}
+
+td {
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    border: 1px solid #dca02d;
+    color: rgb(180 149 47);
+}
+
+td:hover {
+    background-color: rgb(180 149 47);
+}
+
+.noClick {
+    pointer-events: none;
+}
+
+.btn-restart {
+    background-color: rgb(180 149 47);
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
